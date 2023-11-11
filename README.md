@@ -28,8 +28,8 @@
   10.3 Getters & Setters
   10.4 Inheritance
 
-[YT - freeCodeCamp](https://www.youtube.com/watch?v=OK_JCtrrv-c&t=9325s)
-[YT](https://www.youtube.com/watch?v=FLs6rAVQWs0)
+[YT - freeCodeCamp](https://www.youtube.com/watch?v=OK_JCtrrv-c&t=9325s)  &nbsp;
+[YT](https://www.youtube.com/watch?v=FLs6rAVQWs0)     &nbsp;
 [YT _ OOPs](https://www.youtube.com/watch?v=yrFr5PMdk2A)
 <hr>
 
@@ -54,6 +54,17 @@
  echo $name;
  ?>
  ```
+we can als play with numbers using varaibles to Add, multiply or divide them
+ ```
+ <?php 
+ $num = 10;
+$num= $num + 25;  // or we can use 
+$num += 25;
+ echo $num;
+ ?>
+ ```
+Similarly we use the incrament for **Subsctrction -=**, **Multiplication *=** , or <code> division /= </code> 
+
 
 ## Data Types
   - Scaler Types (single Contins one value)    <code> $string = "new Car"; </code> <code> $int = 12345; </code>
@@ -91,35 +102,110 @@ We can assign one variable value to another variable like
  ```
   
 ## Getting User Input
+Get data from User into Input, save or return it values. First we dewclare variable to store those values. 
+```
+ <form action="" method="GET">
+  Name: <input type="text" name="name" placeholder="Enter first name"><br>
+  Age: <input type="number" name="age" placeholder="Enter your Age">
+
+  <input type="submit">
+ </form>
+ Your name is <?php echo $_GET["name"] ?> <br>
+
+ and, Your age is <?php echo $_GET["age"] ?>
+```
+
+Like we are taking input from Users of 2 numbers and add them, and print their result.
+```
+ $num1 = "";
+ $num2 = "";
+ <form action="" method="GET">
+  <input type="number" name="num1" placeholder="Enter first number"><br>
+  <input type="number" name="num2" placeholder="Enter Second number">
+
+  <input type="submit">
+<?php
+ echo $_GET["num1"] + ["num2"]
+ ?>
+```
 
  ### GET and POST
+ - **GET Method**
+ ```
+ <form action="" method="GET">
+  <input type="text" name="firstName">
+
+  <input type="submit">
+ </form>
+ <?php 
+  echo $_GET["name"];
+  ?>
+ ```
+
+ - **POST Method**
+   POSt method is used to encrypt the value while return the required data in URL. It is a secured channel based area where to need to hide the actual data in URI link.
+ ```
+ <form action="" method="POST">
+  <input type="password" name="password">
+
+  <input type="submit">
+ </form>
+ <?php 
+  echo $POST["name"];
+  echo $POST["password"];
+  ?>
+ ```
  ### URL Parameters
  
 ## Arrays
-Contains multiple values under sing variable . <code> $friends = array(); </code>
+array Contains multiple values under single variable. n array holds an Index number for each item value in array. We can store String, numbers with in an array. 
+<code> $friends = array(); </code>
+
  ### Simple Arrays
-   basic sytax of array is as under;
+  basic sytax of array is as under;
    ``` $friends = array(); ```
-   To add values in arrays, we need to pass values in array. Each array item takes an index value of an array. The index start from '0 place' and the array total items could retrieve <code> n-1 </code>, where n is total iems in array.
-    ```$friends = array("Daniel", "Bella", "Frida");```
-    We also can write array without <code> array() </code> method, but only adding <code> [] </code> parantesis in simple format in New PHP Version. Keep in mind that this approach didn't works in older verion of PHP
-    ```$friends = ["Daniel", "Bella", "Frida"];```
+ To add values in arrays, we need to pass values in array. Each array item takes an index value of an array. The index start from '0 place' and the array total items could retrieve <code> n-1 </code>, where n is total iems in array.
+    
+    ```
+    $friends = array("Daniel", "Bella", "Frida");
+       echo $frineds;  //Print all values
+       echo $friends[1]; //this will print index 1 value, which is Bella.
+    ```
+
+The array index start from 0 for the fisrt item, like show in table below
+ 
+      ------ | --------|
+      index  | Value   |
+      ------ | --------|   
+       0     | Daniel  |
+       1     | Bella   |
+       2     | Frida   |
+      ----   | --------|
+        
+ We also can write array without <code> array() </code> method, but only adding <code> [] </code> parantesis in simple format in New PHP Version. Keep in mind that this approach didn't works in older verion of PHP.
+ ```
+ $friends = ["Daniel", "Bella", "Frida"];
+
+```
 
   #### Adding Item to Arrays
-   To add new item to array
-      ---- || ----||
-      
-      ---- | ------|
-      index | Value |
-      ---- | ------|   
-       0   |  Daniel
-      ---- | ------|
-      
-     ```
-      $friends = array("Daniel", "Bella", "Frida");
-      $friends[] = 
-      
-     ```
+  To add new item to array, we can assign it an index number to save like [4] means an index number of 4, which will be the fifth (5th) item. or we can add through **[n+1]** place where 'n' is the total length of array and **+1** means to add 1 plus index.
+  ```
+    $friends = array("Daniel", "Bella", "Frida");
+    $friends[3] = "Johny";
+      echo $friends;   
+     // Now if we echo the $friends array it will contian ("Daniel", "Bella", "Frida", "Johny")
+
+      echo $friends[3]; // print only Johny
+   ```
+  #### Updatuing Arrays Item value
+  To edit or u[pdate the array value, we first check their index position the update like.
+  ```
+    $friends = array("Daniel", "Bella", "Frida");
+    $friends[0] = 400;   //Now "Daniel" value chane to number 400. 
+   ```
+
+
   #### Removing Item from Arrays
    To remove item from array 
    ``` jj ```
@@ -128,14 +214,16 @@ Contains multiple values under sing variable . <code> $friends = array(); </code
   ``` 
 <?php
 <form action="site.php" method="GET">
- <input type="checkbox" name=$fruits[] value="Apple">
- <input type="checkbox" name=$fruits[] value="Orange">
- <input type="checkbox" name=$fruits[] value="Pears">
+ <input type="checkbox" name=$fruits[] value="Apple"><br>
+ <input type="checkbox" name=$fruits[] value="Orange"><br>
+ <input type="checkbox" name=$fruits[] value="Pears"><br>
  
  <input type="submit">
 </form>
 
-echo $fruits;
+$fruits; = $_GET["fruits"];  // this will return all selected items
+
+echo $friuts[1]; // this will only print the specified item value to know either selected or not.
 
 ?>
 ```
