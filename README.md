@@ -92,46 +92,185 @@ We can assign one variable value to another variable like
   
 ## Getting User Input
 
-  ### GET and POST
-  ### URL Parameters
-
+ ### GET and POST
+ ### URL Parameters
+ 
 ## Arrays
 Contains multiple values under sing variable . <code> $friends = array(); </code>
-  ### Simple Arrays
-  ```$friends = array();```
+ ### Simple Arrays
+   basic sytax of array is as under;
+   ``` $friends = array(); ```
+   To add values in arrays, we need to pass values in array. Each array item takes an index value of an array. The index start from '0 place' and the array total items could retrieve <code> n-1 </code>, where n is total iems in array.
     ```$friends = array("Daniel", "Bella", "Frida");```
-    We also can write array without array() method, but only adding [] parantesis in simple format in New PHP Version. Keep in mind that this approach didn't works in older verion of PHP
+    We also can write array without <code> array() </code> method, but only adding <code> [] </code> parantesis in simple format in New PHP Version. Keep in mind that this approach didn't works in older verion of PHP
     ```$friends = ["Daniel", "Bella", "Frida"];```
 
-  ## Using Checkboxes
-  ``` ```
+  #### Adding Item to Arrays
+   To add new item to array
+      ---- || ----||
+      
+      ---- | ------|
+      index | Value |
+      ---- | ------|   
+       0   |  Daniel
+      ---- | ------|
+      
+     ```
+      $friends = array("Daniel", "Bella", "Frida");
+      $friends[] = 
+      
+     ```
+  #### Removing Item from Arrays
+   To remove item from array 
+   ``` jj ```
+
+ ## Using Checkboxes
+  ``` 
+<?php
+<form action="site.php" method="GET">
+ <input type="checkbox" name=$fruits[] value="Apple">
+ <input type="checkbox" name=$fruits[] value="Orange">
+ <input type="checkbox" name=$fruits[] value="Pears">
+ 
+ <input type="submit">
+</form>
+
+echo $fruits;
+
+?>
+```
   
-  ### Assosiative Arrrays
+ ### Assosiative Arrrays
+   In associative array we use the <code> Key => Value </code> pair. In associative array the **key is the name** and **Pair is the value** of their age 
+   ```$friends = array("Daniel=>30", "Bella=>40", "Frida=>35");```
 
+   Check for Students exam Grades
+   ```
+  <?php
+   $grades = array("Daniel=>A+", "Bella=>B", "Frida=>C-");
+// Print the grade of Daniel, which is A+.
+   echo $grades["Daniel"];
+
+// Update Key Value for Bella
+   $grades ["Bella"] = 'F';
+
+// Print Total count numbers of items in $grades array.
+   echo count($grades);
+
+  ?>
+   ```
+   
 ## Functions
+Write code at once and reuse through out the program.   The Function()performs some sort of action based, It allow us to group similar code together.  container where we write code and reuse it throughout our program.
+ 
+   ```
+ <?php
+  function sayHi($name){
+    echo "Hello $name <br>";
+ }
+   //Call Function
+  sayHi("Tom");
+  sayHi("Dave");
+  sayHi("Olifa");
+ ```
+The Function() with Two or as many required parameters, like $name and $age 
+   ```
+ <?php
+  function sayHi($name, $age){
+    echo "Hello $name, your age is $age <br>";
+ }
+   //Call Function
+  sayHi("Tom", 40);
+  sayHi("Dave", 65);
+  sayHi("Olifa", 45);
+ ```
 
-  ### Retun Statements
+ ### Retun Statements
+   It allow us to group similar code together.  container where we write code and reuse .
+   Give a function giving information with parameters
+   ```
+ <?php
+  function cube($num){
+   return $num * $num * $num;  // Return the statement and finish process
+ }
+  echo cube(4);  //Call Function
+ ```
 
 ## If Statements
 
 
-  ### If Statements
+ ### If Statements
 
-  ### If Else
-  ### Swithch Statements
+ ```
+ // IF and IF_Else statement
+ $isaMale = true;
+ if ($isMal){
+  echo "You are Male";
+ }
+ ```
+
+
+ ### If Else
+  ```
+  // IF_Else statement
+   $isaMale = true;
+   
+    if ($isMale){
+      echo "This is a Male";
+      } else {
+       echo "You are not male";
+    )
+    
+  ```
+  
+  IF-else statement with **&& (and)** , **|| (or)** operators
+  ```
+  // IF and IF_Else statement
+   $isaMale = true;
+   $isTall = false;
+    if ($isMale || $isTall){
+      echo "You are Tall Male";
+      } else {
+       echo "You are not ";
+    )
+    
+  ```
+
+ ### If Else If
+  ```
+  // IF and IF_Else statement
+ <?php
+
+ $isaMale = true;
+$isTall = false;
+ if($ismale && $isTall){
+   echo "You are Tall Man";
+} elseif($ismale && !$isTall){
+   echo "You are male but not tall";
+) elseif(!$ismale && $isTall){
+   echo "You are not male but tall";
+) else {
+   echo "You are not man not tall";
+)
+
+?>
+  ```
+
+ ### Swithch Statements
 
 ## LOOPS
-  ### While Loop
-  
-  ### For Loop 
-  
+ 
+ ### For Loop
+
+ ### While Loop
+   
 ## Classes & Objects - OOPs
-  ###
+ ###
 
-  ### Constructors
+ ### Constructors
 
-  ### Object Functions
+ ### Object Functions
 
-  ### Getters & Setters
+ ### Getters & Setters
 
-  ### Inheritance
+ ### Inheritance
