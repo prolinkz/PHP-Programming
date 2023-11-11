@@ -3,9 +3,9 @@
 2. Comments
 3. Variable
 4. Data Types
-  4.1 Working With Strings
-  4.2 Working With Numbers (INT and float)
-  4.3 Working With 
+  -4.1 Working With Strings
+  -4.2 Working With Numbers (INT and float)
+  -4.3 Working With 
 5. Getting User Input
   5.1 GET and POST
   5.2 URL Parameters
