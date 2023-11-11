@@ -3,16 +3,16 @@
 2. Comments
 3. Variable
 4. Data Types
-  -4.1 Working With Strings
-  -4.2 Working With Numbers (INT and float)
-  -4.3 Working With 
+ **4.1 Working With Strings
+ **4.2 Working With Numbers (INT and float)
+ **4.3 Working With 
 5. Getting User Input
-  5.1 GET and POST
-  5.2 URL Parameters
+ 5.1 GET and POST
+ 5.2 URL Parameters
 6. Arrays
-  6.1 Simple Arrays
-    6.1.1 Using Checkboxes
-  6.2 Assosiative Arrrays
+ 6.1 Simple Arrays
+  6.1.1 Using Checkboxes
+ 6.2 Assosiative Arrrays
 7. Functions
 7.1 Retun Statements
 8. Statements
